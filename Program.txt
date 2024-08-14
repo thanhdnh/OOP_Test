@@ -1,0 +1,25 @@
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.Clear();
+        
+        Student st = new Student();
+        //st.Name = "Nam";
+        //st.Gpa = 7.3f;
+        Console.WriteLine(st.showInfo());
+        Student st2 = new Student("Nam", 7.3f);
+        Console.WriteLine(st2.showInfo());
+        Student st3 = new Student(st2);
+        st2.Name = "New Nam";
+        Console.WriteLine(st3.showInfo());
+        //Student st1 = st;
+        //st1.Name = "Nu";
+        //Console.WriteLine(st.showInfo());
+        /*
+        Student(name: Nam, gpa: 7.3)
+        Student(name: Nu, gpa: 7.3)
+        */
+        Console.ReadKey();
+    }
+}
